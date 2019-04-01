@@ -12,6 +12,7 @@ git reset --hard 2bca8db 回到制定版本（即使该版本比当前版本新�
 
 git relog 查看git操作命令
 
-git checkout -- fileName  删除本地修改、当修改已提交暂存区则回到未add的状态
+git checkout -- fileName  删除本地修改、当修改已提交暂存区则回到未add的状态 
+其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
 ```

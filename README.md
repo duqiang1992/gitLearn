@@ -16,3 +16,12 @@ git checkout -- fileName  删除本地修改、当修改已提交暂存区则回
 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
 ```
+
+### 关联远程仓库
+
+```
+git clone xxxxxx //克隆远程仓库代码
+
+git remote add origin git@server-name:path/repo-name.git；//本地与远程仓库关联
+
+```

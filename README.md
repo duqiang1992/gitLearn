@@ -25,3 +25,19 @@ git clone xxxxxx //克隆远程仓库代码
 git remote add origin git@server-name:path/repo-name.git；//本地与远程仓库关联
 
 ```
+
+### 分支
+
+```
+
+git checkout -b dev
+
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+$ git branch dev
+$ git checkout dev
+
+
+git branch 查看当前分支
+
+```

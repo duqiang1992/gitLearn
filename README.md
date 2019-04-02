@@ -40,4 +40,14 @@ $ git checkout dev
 
 git branch 查看当前分支
 
+git merge命令用于合并指定分支到当前分支。合并后，再查看readme的内容，就可以看到，和dev分支的最新提交是完全一样的。
+
+注意到上面的Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。
+
+当然，也不是每次合并都能Fast-forward，我们后面会讲其他方式的合并。
+
+
+git branch -d dev 删除dev 分支
 ```
+
+测试冲突fea

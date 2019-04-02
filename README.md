@@ -49,6 +49,8 @@ git merge命令用于合并指定分支到当前分支。合并后，再查看re
 
 git branch -d dev 删除dev 分支
 
+git branch -d feature-vulcan  若此分支有代码未合并，强行才能删除
+
 git log --graph --pretty=oneline --abbrev-commit 查看分体合并情况(单行显示)
 
 ```
@@ -63,4 +65,29 @@ git log --graph --pretty=oneline --abbrev-commit 查看分体合并情况(单行
 git merge --no-ff -m "merge with no-ff" dev
 
 本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+```
+
+### 工作暂存
+* 你不想提交，而是工作只进行到一半，还没法提交，预计完成还需1天时间。但是，必须在两个小时内修复该bug，怎么办？幸好，Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+
+```
+git stash //Git还提供了一个stash功能，可以把当前工作现场“储藏”起来
+
+git stash list
+
+一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+
+你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：
+
+$ git stash apply stash@{0}
+
+```
+
+#### 多人合作
+
+```
+git rebase  把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
+
 ```

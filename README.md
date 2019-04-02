@@ -48,6 +48,9 @@ git merge命令用于合并指定分支到当前分支。合并后，再查看re
 
 
 git branch -d dev 删除dev 分支
+
+git log --graph --pretty=oneline --abbrev-commit 查看分体合并情况
+
 ```
 
 测试冲突fea

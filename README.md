@@ -91,3 +91,31 @@ $ git stash apply stash@{0}
 git rebase  把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
 
 ```
+
+#### 创建标签
+
+``` 
+git tag tagName //默认标签是打在最新提交的commit上的
+
+git tag tagName commitId //再某个commit上打tag
+
+git tag 查看tag(按字母排序，非时间)
+
+git show <tagname> 查看标签详情
+
+git tag -d v0.1 删除标签
+
+git push origin <tagname>  因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。
+
+如果要推送某个标签到远程
+
+git push origin --tags 一次性推送全部尚未推送到远程的本地标签
+
+
+要删除远程标签就麻烦一点，先从本地删除：
+git tag -d v0.9
+然后，从远程删除。删除命令也是push，但是格式如下
+git push origin :refs/tags/v0.9
+
+完结
+```

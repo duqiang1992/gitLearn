@@ -49,6 +49,8 @@ git merge命令用于合并指定分支到当前分支。合并后，再查看re
 
 git branch -d dev 删除dev 分支
 
+git branch -d feature-vulcan  若此分支有代码未合并，强行才能删除
+
 git log --graph --pretty=oneline --abbrev-commit 查看分体合并情况(单行显示)
 
 ```
@@ -80,5 +82,12 @@ git stash list
 你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：
 
 $ git stash apply stash@{0}
+
+```
+
+#### 多人合作
+
+```
+git rebase  把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
 
 ```
